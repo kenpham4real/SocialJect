@@ -11,6 +11,7 @@
 */
 
 
+<<<<<<< HEAD
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
@@ -21,9 +22,17 @@ function App() {
         This is the default application screen.
       </Text>
     </View>
+=======
+import ProjectList from './src/screens/core/user_joining/ProjectList'
+
+const App = () => {
+  return (
+    <ProjectList/>
+>>>>>>> 64828957a4e3bcb7c605ffe5e9649576fec90789
   );
 }
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -40,3 +49,6 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+=======
+export default App;
+>>>>>>> 64828957a4e3bcb7c605ffe5e9649576fec90789
