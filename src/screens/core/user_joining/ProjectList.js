@@ -1,3 +1,17 @@
+/*
+* Screen 3.
+* Purpose: Select projects
+* Functions: {
+    ProjectList{
+        _onProjectView
+    }
+}
+* Contributors: {
+    Ken Pham: June 17
+}
+*/
+
+
 import React from 'react';
 import {
   StyleSheet,
@@ -10,9 +24,17 @@ import {
 import { HEADER_TITLE_PADDING_LEFT, HEADER_TITLE_PADDING_TOP } from '../../../constants/styles/padding'
 import { HEADER_TITLE_SIZE } from '../../../constants/styles/fontSize';
 
+import {global_styles} from '../../../components/styles/container'
+
 import ProjectPost from '../../../components/app/user_joining/ProjectPost'
 
 const ProjectList = props => {
+
+    // Handle the navigation to ProjectView (screen 4) when pressing
+    const _onProjectView  = () => {
+        props.navigation.navigate('ProjectView')
+    }
+
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -24,9 +46,12 @@ const ProjectList = props => {
                     keyExtractor={item => item}
                     renderItem={itemData => {
                         return(
-                            <ProjectPost/>
+                            <ProjectPost
+                            _onProjectView={_onProjectView}
+                            />
                         )
                     }}
+                    
                 />
             </View>
         </View>

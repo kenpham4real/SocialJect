@@ -1,58 +1,80 @@
+/*
+* Component for Screen 3.
+* Purpose: Style a post 
+* Function: {
+    ProjectPost
+}
+* Contributors: {
+    Ken Pham: June 17
+}
+*/
+
 import React from 'react';
 import {
     View,
     Text,
     StyleSheet,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Touchable
 } from 'react-native';
 
 import { HEADER_TITLE_PADDING_LEFT, HEADER_TITLE_PADDING_TOP } from '../../../constants/styles/padding';
+import {global_styles} from '../../../components/styles/container'
 
 const ProjectPost = props => {
     return(
-        <TouchableOpacity style={styles.postButton}>
+        // <View>
+        <TouchableOpacity style={styles.postButton} onPress={props._onProjectView}>
             <View style={styles.container}>
+                
                 <View style={styles.postImageContainer}>
-                    <Image source={require('../../../assets/images/space.jpg')} style={{height: null, width: null, flex: 1, borderRadius: 10}}/>
+                    <Image source={require('../../../assets/images/space.jpg')} style={styles.postImage}/>
                 </View>
                 <View style={styles.postContentContainer}>
-                    <Text style={{color: 'white', fontWeight: 'bold', fontSize: 30}}>Blood Donation</Text>
-                    <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20}}>Deadline<Text style={{fontWeight: 'normal'}}> 20/6/2020</Text></Text>
+                    <Text style={{color: 'black', fontSize: 30}}>Blood Donation</Text>
+                    <Text style={{color: 'black', color: 'grey', fontStyle: 'italic', fontSize: 20}}>Deadline:<Text style={{fontWeight: 'normal'}}> 20/6/2020</Text></Text>
                 </View>
             </View>
         </TouchableOpacity>
+        // </View>
     )
 }
 
 export default ProjectPost;
 
 const styles = StyleSheet.create({
-    container: {
-        // borderColor: 'yellow', borderWidth: 2,
-        height: 250,
-        borderRadius: 10
-    },
-    postImageContainer:{
-        flex: 1,
-    },
-    postContentContainer:{
-        // borderColor: 'white', borderWidth: 2,
-        position: 'absolute',
-        paddingBottom: 20,
-        paddingLeft: 20,
-        paddingRight: 20,
-        right: 0,
-        left: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(52, 52, 52, 0.5)',
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10,
-    },
     postButton:{
         marginBottom: HEADER_TITLE_PADDING_TOP,
         marginHorizontal: HEADER_TITLE_PADDING_LEFT,
         
-    }
+    },
+    container: {
+        borderColor: 'grey', borderWidth: 1,
+        height: 300,
+        borderRadius: 10,
+    },
+    postImageContainer:{
+        flex: 2,
+    },
+    postImage:{
+        height: null, 
+        width: null, 
+        flex: 1, 
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+    },
+    postContentContainer:{
+        // borderColor: 'grey', borderWidth: 1,
+        flex: 1,
+        // position: 'absolute',
+        // paddingBottom: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        justifyContent: 'center',
+        // backgroundColor: 'rgba(52, 52, 52, 0.5)',
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+    },
 
 })
