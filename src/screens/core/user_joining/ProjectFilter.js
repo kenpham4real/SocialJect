@@ -20,7 +20,7 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-function _Screen02() {
+const  ProjectFilter = (props) => {
 
     //This is to control whether the pop-up is open or not. Not sure how this even works, but it does anyway.
     const [modalOpen, setModalOpen] = useState(false);
@@ -38,6 +38,7 @@ function _Screen02() {
                     title="Places"
                     color="#841584"
                 />
+                <Button color="#841584" title="Tìm dự án" onPress={() => props.navigation.navigate('ProjectList')} />
             </TouchableOpacity>
 
             <Modal visible={modalOpen}>
@@ -74,4 +75,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default _Screen02;
+export default ProjectFilter;
