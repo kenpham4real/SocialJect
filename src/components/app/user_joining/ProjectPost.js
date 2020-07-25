@@ -19,7 +19,7 @@ import {
     Touchable
 } from 'react-native';
 
-import { HEADER_TITLE_PADDING_LEFT, HEADER_TITLE_PADDING_TOP } from '../../../constants/styles/padding';
+import { HEADER_TITLE_PADDING } from '../../../constants/styles/padding';
 import {global_styles} from '../../../components/styles/container'
 
 const ProjectPost = props => {
@@ -45,8 +45,8 @@ export default ProjectPost;
 
 const styles = StyleSheet.create({
     postButton:{
-        marginBottom: HEADER_TITLE_PADDING_TOP,
-        marginHorizontal: HEADER_TITLE_PADDING_LEFT,
+        marginBottom: HEADER_TITLE_PADDING,
+        marginHorizontal: HEADER_TITLE_PADDING,
         
     },
     container: {
