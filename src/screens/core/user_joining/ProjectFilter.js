@@ -39,7 +39,7 @@ const ProjectFilter = props => {
     */
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Image style={styles.image} source={require('../../../assets/images/Screen2.png')}/>
+        <Image style={styles.image} source={require('../../../assets/images/screen2.png')}/>
         <View style={styles.title_1}>
           <Button
             color="blue"
